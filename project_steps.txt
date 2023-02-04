@@ -1,0 +1,17 @@
+1.	django-admin startproject Skyloov
+2.	python manage.py startapp products
+3.	pip install requirements (djangorestframework jwt djangorestframework-simplejwt mysqlclient drf-yasg).
+4.	Add "products" app in settings.py
+5.	Modify settings.py to include the database settings and configure JWT authentication.
+6.	Create a model "Product" with the fields mentioned in "models.py" of the "products" app.
+7.	Create a serializer class in the "serializers.py" file of the "products" app for the "Product" model and for the search criteria.
+8.	Create a view in the "views.py" file of the "products" app for handling the search for products.
+9.	In the "urls.py" file of the "products" app, create a URL pattern for the search endpoint.
+10.	Create a cart model in the "models.py" file of the "products" app and add the necessary fields (Cart model has a many-to-one relationship with the User and Product models, as represented by the ForeignKey fields. The quantity field is a positive integer, and the created_at and updated_at fields are timestamps that will be automatically set when a cart is created and updated).
+11.	Create a view in the "views.py" file of the "products" app for handling the cart operations.
+12.	In the "urls.py" file of the "products" app, create URL patterns for the cart operations.
+13.	Implement pagination and sorting for the search results in the views and serializers.
+14.	Add Swagger documentation (hence the drf-yasg package :) .
+15.	python manage.py migrate to create the necessary tables in the MySQL database.
+16.	Test the search and cart endpoints (Curl / Postman).
+17.	Push the project to GitHub git init and git push.
